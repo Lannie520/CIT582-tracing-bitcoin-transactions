@@ -46,7 +46,7 @@ class TXO:
         for output in tx_list["vout"]:
             if output["n"] == n:
                 txo = TXO(tx_hash=tx_list["hash"], n=output["n"], amount=float(output["value"])* pow(10, 8), owner=output["scriptPubKey"]["addresses"][0], time=datetime.fromtimestamp(tx_list["time"]))
-        return txo_obj
+        return txo
 
     def get_inputs(self, d=1):
         
